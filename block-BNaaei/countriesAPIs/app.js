@@ -13,8 +13,30 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const countryRouter = require('./routes/country');
 const stateRouter = require('./routes/state');
+const { regions } = require('country-data');
 
 const app = express();
+
+// var World        = require('country-state-city')
+// var co = require('countryjs');
+// console.log(co.all());
+// var o = World.State.getStatesOfCountry("IN").map((e)=>{
+//   e.country = "INDIA"
+//   return e;
+// })
+// console.log(o)
+// const w = co.all().map((e)=>{
+//     let n = {};
+//     if ( e.name ) {
+//     n.contient = e.region;
+//     n.name = String(e.name).toUpperCase();
+//     n.area = e.area;
+//     n.border_shares = e.borders;
+//     n.population = e.population;
+//     }
+//     return n
+// })
+// console.log(w) 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

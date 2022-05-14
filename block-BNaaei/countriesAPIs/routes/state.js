@@ -29,7 +29,7 @@ router.post( '/', async ( req, res, next ) => {
 
 router.put( '/:id/update', async ( req, res, next ) => {
     try {
-        const state = await State.findByIdAndUpdate( { id: req.params.id }, req.body, { new: true } );
+        const state = await State.findByIdAndUpdate( req.params.id , req.body, { new: true } );
         res.status( 200 ).json( { state } )
     } catch ( err ) {
         return next ( err );

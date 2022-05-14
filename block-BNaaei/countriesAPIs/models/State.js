@@ -6,7 +6,7 @@ const stateSchema = new Schema( {
     country: String,
     countryId: { type: Schema.Types.ObjectId, ref: "country" },
     population: { type: Number, default: 400000 },
-    area: String,
+    area: Number,
     neighbouring_states: [ { type: Schema.Types.ObjectId, ref: "states" } ]
 } )
 
