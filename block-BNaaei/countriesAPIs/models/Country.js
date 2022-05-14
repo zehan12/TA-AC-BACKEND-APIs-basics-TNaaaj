@@ -8,7 +8,7 @@ const countrySchema = new Schema( {
     population: { type: Number, default:100000},
     ethnicity: String,
     neighbouring_countires: [{ type: Schema.Types.ObjectId, ref: "country" }],
-    border_shares: [{ type: String }]
+    border_shares: [{ type: String }],
     area: Number
 } );
 
@@ -29,8 +29,8 @@ countrySchema.pre('save', function (next) {
 //     }
 // });
 
-countrySchema.pre( 'save', function ( next ) {
-    this.border_shares.split(",");
-} )
+// countrySchema.pre( 'save', function ( next ) {
+//     this.border_shares.split(",");
+// } )
 
 module.exports = mongoose.model( "Country", countrySchema );
